@@ -80,9 +80,9 @@ class BaseNetwork {
           }
 
           return _dio.request(options.path, options: options);
-        }
-      }),
-    );
+       }
+     }),
+   );
   }
 
   Dio get ref => _dio;

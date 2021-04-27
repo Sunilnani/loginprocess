@@ -32,9 +32,11 @@ dependencies:
   google_fonts: ^0.3.9
   fluttertoast: ^8.0.3
   otp_text_field: ^1.1.0
+  flutter_pin_code_fields: ^1.1.0
   intl: ^0.16.1
   shared_preferences:
   dio: ^3.0.10
+
 
 dev_dependencies:
   flutter_test:
