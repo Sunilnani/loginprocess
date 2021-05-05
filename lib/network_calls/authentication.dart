@@ -12,8 +12,12 @@ class LoginManager {
 
     if (response?.statusCode == 200) {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-
-      if (response.data['status']) {
+      // here the issuw is with the if statement
+      // in the response we dont have a key named status  so that is the reason
+      // response.data['status'] returned null when comparing this kind of dynamic data its better to user == true
+      // Okay?
+      print(response.data);
+      if (response.data['user_status'] == 1) {
         prefs.setString("token", response.data['token']);
         print(response);
         return ResponseData("", ResponseStatus.SUCCESS,

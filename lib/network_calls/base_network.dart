@@ -47,7 +47,7 @@ class BaseNetwork {
           final options = response.request;
 
           Response refreshResponse = await _tokenDio.post(
-            '/api/token/refresh/',
+            '/verify_otp/',
             data: FormData.fromMap({
               "token": _getAuthorizationToken(),
             }),
