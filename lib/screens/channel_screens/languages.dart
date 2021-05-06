@@ -3,12 +3,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app10008/models/genres.dart';
 import 'package:flutter_app10008/network_calls/base_network.dart';
-import 'package:flutter_app10008/screens/home_page_screens/home.dart';
 import 'package:flutter_app10008/styles/styles.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'channel.dart';
-import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as gradient_ui;
 class AllChannels extends StatefulWidget {
   AllChannels({this.genreid, this.genrename});
   final int genreid;
@@ -18,7 +16,7 @@ class AllChannels extends StatefulWidget {
 }
 
 class _AllChannelsState extends State<AllChannels> {
-  Gradient g1 = LinearGradient(
+  Gradient gradient = LinearGradient(
     colors: [
       Colors.deepPurple,
       Colors.pinkAccent,
@@ -95,8 +93,8 @@ class _AllChannelsState extends State<AllChannels> {
             children: [
               _fetching ? Align(
                 alignment: Alignment.center,
-                child: a.GradientCircularProgressIndicator(
-                  valueGradient: g1,
+                child: gradient_ui.GradientCircularProgressIndicator(
+                  valueGradient: gradient,
                   backgroundColor: Colors.grey[200],
                 ),
               ):
@@ -128,8 +126,8 @@ class _AllChannelsState extends State<AllChannels> {
                       // SizedBox(height: 20,),
                       _fetching ? Align(
                         alignment: Alignment.center,
-                        child: a.GradientCircularProgressIndicator(
-                          valueGradient: g1,
+                        child: gradient_ui.GradientCircularProgressIndicator(
+                          valueGradient: gradient,
                           backgroundColor: Colors.grey[200],
                         ),
                       ):

@@ -4,13 +4,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app10008/models/channels.dart';
-import 'package:flutter_app10008/screens/home_page_screens/home.dart';
 import 'package:flutter_app10008/screens/home_page_screens/my_bottom_bar.dart';
 import 'package:flutter_app10008/styles/styles.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../network_calls/base_network.dart';
-import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as gradient_ui;
 
 class Channels extends StatefulWidget {
   Channels({this.channelid});
@@ -20,7 +19,7 @@ class Channels extends StatefulWidget {
 }
 
 class _ChannelsState extends State<Channels> {
-  Gradient g1 = LinearGradient(
+  Gradient gradient = LinearGradient(
     colors: [
       Colors.deepPurple,
       Colors.pinkAccent,
@@ -117,8 +116,8 @@ class _ChannelsState extends State<Channels> {
                 child: Column(
                   children: [
                     SizedBox(height: 70,),
-                    _fetching ?  a.GradientCircularProgressIndicator(
-                      valueGradient: g1,
+                    _fetching ?  gradient_ui.GradientCircularProgressIndicator(
+                      valueGradient: gradient,
                       backgroundColor: Colors.grey[200],
                     ):
                     Container(

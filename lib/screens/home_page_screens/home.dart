@@ -5,7 +5,7 @@ import 'package:flutter_app10008/models/genres.dart';
 import 'package:flutter_app10008/screens/channel_screens/languages.dart';
 import 'package:flutter_app10008/styles/styles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as gradient_ui;
 
 import '../../network_calls/base_network.dart';
 import '../channel_screens/channel.dart';
@@ -17,7 +17,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Gradient g1 = LinearGradient(
+  Gradient gradient = LinearGradient(
     colors: [
       Colors.deepPurple,
       Colors.pinkAccent,
@@ -82,8 +82,8 @@ class _HomePageState extends State<HomePage> {
           children: [
             _fetching ? Align(
               alignment: Alignment.center,
-              child: a.GradientCircularProgressIndicator(
-                valueGradient: g1,
+              child: gradient_ui.GradientCircularProgressIndicator(
+                valueGradient: gradient,
                 backgroundColor: Colors.grey[200],
               ),
             ):

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_app10008/styles/styles.dart';
-import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
+import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as gradient_ui;
 
 import 'login_page.dart';
 
@@ -28,7 +28,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 class _MyHomePageState extends State<MyHomePage> {
-  Gradient g1 = LinearGradient(
+  Gradient gradient = LinearGradient(
     colors: [
       Colors.deepPurple,
       Colors.pinkAccent,
@@ -65,8 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Image(image: AssetImage("img/Home icons/logo 1.png",),fit: BoxFit.cover,)),
                 ),
                 SizedBox(height: 50,),
-                a.GradientCircularProgressIndicator(
-                  valueGradient: g1,
+                gradient_ui.GradientCircularProgressIndicator(
+                  valueGradient: gradient,
                   backgroundColor: Colors.grey[200],
                 ),
 

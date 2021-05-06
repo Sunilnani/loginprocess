@@ -29,5 +29,8 @@ Store storeItems = (
 class AppColor {
   static EdgeInsets padding = EdgeInsets.symmetric(horizontal: 25);
   static TextStyle headingsstyles=GoogleFonts.montserrat(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 22);
+  static TextStyle textStyle=GoogleFonts.montserrat(color:Colors.white,fontWeight: FontWeight.w500,fontSize: 18);
+  static Color backgroungcolor=Colors.grey[900];
+  static BorderRadius borderradius= BorderRadius.circular(15);
 }
 
