@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:better_player/better_player.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app10008/models/channels.dart';
 import 'package:flutter_app10008/screens/home_page_screens/home.dart';
+import 'package:flutter_app10008/screens/home_page_screens/my_bottom_bar.dart';
 import 'package:flutter_app10008/styles/styles.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -141,10 +143,11 @@ class _ChannelsState extends State<Channels> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
+                            margin: EdgeInsets.all(8.0),
                             height:60,
                             width:50,
                             decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Color(0xFF707070),
-                                image: DecorationImage(image: NetworkImage("http://aparnamule.pythonanywhere.com${videos.image}"),fit: BoxFit.fill)
+                                image: DecorationImage(image: NetworkImage("http://aparnamule.pythonanywhere.com${videos.image}"),fit: BoxFit.fill,)
                             ),
 
                           ),
@@ -315,7 +318,7 @@ class _ChannelsState extends State<Channels> {
                             onTap:(){
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) =>HomePage(
+                                  builder: (context) =>MyBottomNavigationBar(
                                   ),
                                 ),
                               );

@@ -148,7 +148,7 @@ class _ProfileState extends State<Profile> {
                         borderRadius:storeItems.radius,
                         color: Colors.white,
                       ),
-
+                      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2 ),
                       child: TextField(
                         controller: nameController,
                         decoration: InputDecoration(
@@ -166,6 +166,7 @@ class _ProfileState extends State<Profile> {
                         borderRadius:storeItems.radius,
                         color: Colors.white,
                       ),
+                      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2 ),
                       child: TextField(
                         controller: contact,
                         decoration: InputDecoration(
@@ -207,6 +208,7 @@ class _ProfileState extends State<Profile> {
                               borderRadius: BorderRadius.circular(15),
                               color: Colors.white
                           ),
+                          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2 ),
                           child: Row(
                             children: [
                               Icon(Icons.location_on_rounded,size: 18,color: Colors.grey[700],),

@@ -1,12 +1,11 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app10008/styles/styles.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/style.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import 'screens/home_page_screens/home.dart';
 import 'screens/home_page_screens/my_bottom_bar.dart';
 import 'network_calls/authentication.dart';
@@ -342,6 +341,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2 ),
                     child: TextField(
                       controller: newTextEditingController,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         prefixIcon: Icon(Icons.email_outlined,size: 20,),
                         hintText: "Email id",

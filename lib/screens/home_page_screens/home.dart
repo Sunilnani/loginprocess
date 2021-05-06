@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/N%20SUNIL/AndroidStudioProjects/flutter_app10008/lib/screens/channel_screens/languages.dart';
 import 'package:flutter_app10008/models/genres.dart';
+import 'package:flutter_app10008/screens/channel_screens/languages.dart';
 import 'package:flutter_app10008/styles/styles.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:gradient_ui_widgets/gradient_ui_widgets.dart' as a;
